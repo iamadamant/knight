@@ -1,0 +1,296 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+@font-face {
+    font-family: SortsMillGoudy;
+    src: url(../fonts/SortsMillGoudy-Regular.ttf);
+}
+
+body {
+    font-family: SortsMillGoudy;
+    overflow: hidden;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    line-height: 1.3;
+}
+
+ul li,
+ol li {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.screen,
+.score-value span {
+    position: absolute;
+    left: 50%;
+    top: 450px;
+    transform: translate(-50%, -50%);
+}
+
+.screen-start,
+.screen-ranking {
+    width: 500px;
+    height: 350px;
+}
+
+.screen-ranking {
+    width: 50vw;
+}
+
+.screen-game {
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/bg-game.png);
+    background-size: cover;
+}
+
+.panel {
+    width: 100%;
+    padding: 30px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+table {
+    overflow-y: auto;
+    max-height: 27vh;
+    display: block;
+    margin-bottom: 2vh;
+}
+
+tr > th:nth-child(1),
+tr > td:nth-child(1) {
+    width: 10%;
+    text-align: left;
+}
+
+tr > th:nth-child(2),
+tr > td:nth-child(2) {
+    width: 200px;
+    text-align: left;
+}
+
+tr > td:nth-child(3) {
+    width: 200px;
+    text-align: center;
+}
+
+td,
+th {
+    line-height: 2;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type='text'] {
+    min-width: 200px;
+}
+
+input[type='text'],
+input[type='submit'],
+button {
+    padding: 9px;
+}
+
+input[type='submit'],
+button {
+    background: #778d94;
+    color: #fff;
+    border: none;
+}
+
+.game-panel {
+    position: absolute;
+    color: #fff;
+}
+
+.game-panel-skills {
+    right: 30px;
+    bottom: 30px;
+}
+
+.game-panel-user {
+    left: 30px;
+    top: 30px;
+}
+
+.game-panel-scores {
+    bottom: 30px;
+    left: 30px;
+}
+
+.user-info {
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.panel-xp,
+.panel-mp {
+    height: 23px;
+    background: white;
+    margin-bottom: 4px;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+    position: relative;
+}
+
+.panel-xp {
+    width: 200px;
+}
+
+.panel-mp {
+    width: 176px;
+}
+
+.score-value {
+    width: 100%;
+    height: 100%;
+}
+
+.panel-xp .score-value {
+    background: #9f000a;
+}
+
+.panel-mp .score-value {
+    background: #004bb8;
+}
+
+.score-value span {
+    padding-right: 13px;
+}
+
+.game-panel-skills img {
+    margin-left: -1px;
+}
+
+.show {
+    z-index: 300;
+}
+
+.hiden {
+    display: none;
+}
+
+#wrapper {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.player {
+    width: 75px;
+    height: 110px;
+}
+
+#game {
+
+    background-image: url(../img/bg-game.png);
+    margin: 0;
+    overflow: hidden;
+}
+
+#skillPanel {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.skill {
+    width: 50px;
+    height: 50px;
+    opacity: 0.7;
+}
+
+.skill:hover {
+    box-shadow: 0 0 15px green;
+    opacity: 1;
+}
+
+#deathScreen {
+    position: fixed;
+    background: url(../img/skull.png);
+    background-size: 100% 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#winScreen {
+    position: fixed;
+    background: url(../img/castle.jpg);
+    background-size: 100% 100%;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#deathScreen h1, #winScreen h1 {
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+
+a.restart {
+    position: absolute;
+    left: 45%;
+    bottom: 10%;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgb(245, 245, 245);
+    text-shadow: 0 -1px rgba(0, 0, 0, .1);
+    text-decoration: none;
+    user-select: none;
+    padding: .3em 1em;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: #0c9c0d linear-gradient(#82d18d, #0c9c0d);
+    box-shadow: inset #72de26 0 -1px 1px, inset 0 1px 1px #98ff98, #3caa3c 0 0 0 1px, rgba(0, 0, 0, .3) 0 2px 5px;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .0) 30%, rgba(255, 255, 255, .8), rgba(255, 255, 255, .0) 70%), radial-gradient(190% 100% at 50% 0%, rgba(255, 255, 255, .7) 0%, rgba(255, 255, 255, .5) 50%, rgba(0, 0, 0, 0) 50%);
+    background-repeat: no-repeat;
+    background-size: 200% 100%, auto;
+    background-position: 200% 0, 0 0;
+    -webkit-animation: pulsate 3.2s linear infinite;
+    animation: pulsate 3.2s linear infinite;
+}
+
+a.restart:active {
+    box-shadow: none;
+}
+
+a.restart:hover {
+    transition: .5s linear;
+    background-position: -200% 0, 0 0;
+}
+
+@-webkit-keyframes pulsate {
+    50% {
+        color: #fff;
+        text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #ffd, 0 0 8px #fff;
+    }
+}
+
+@keyframes pulsate {
+    50% {
+        color: #fff;
+        text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #ffd, 0 0 8px #fff;
+    }
+}

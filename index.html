@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+    <button id="pauseButton" style="position: fixed; top: 20px; left:49%">Pause</button>
+    <div id="skillPanel"></div>
+    <div style="position: absolute; left: 20px; top: 100px;color: white; font-size: 20px;">Nick: <span name="nickname"></span></div>
+    <div style="position: absolute; color: white; right: 20px; top: 30px; font-size: 30px;">Score: <span name="score">0</span></div>
+    <div id="game">
+    </div>
+    <div id="deathScreen">
+       <h1 style="color: red">You lose!</h1>
+        <div style="position: absolute; left: 40px; top: 100px;color: white; font-size: 40px;">Nick: <span name="nickname"></span></div>
+        <div style="position: absolute; color: white; right: 20px; top: 30px; font-size: 50px;">Score: <span name="score">0</span></div>
+        <div style="position absolute; bottom: 60px"><a href="#" class="restart" style="background-color: red" name="restart">Restart</a></div>
+    </div>
+    <div id="winScreen">
+      <div style="position absolute; bottom: 60px"><a href="#" class="restart" name="restart">Restart</a></div>
+       <div style="position: absolute; left: 40px; top: 100px;color: black; font-size: 40px;">Nick: <span name="nickname"></span></div>
+        <div style="position: absolute; color: black; right: 20px; top: 30px; font-size: 50px;">Score: <span name="score">0</span></div>
+        <h1>You win!</h1>
+    </div>
+    <div class="screen screen-start show" id='startScreen'>
+        <div id="panel" class="panel">
+            <h1>The Battle of Heroes</h1>
+            <ul>
+                <li>Enter your name and press the start button</li>
+                <li>Go ahead by overcoming the obstacles</li>
+                <li>Destroy the monsters in your path</li>
+                <li>Use the skills to fight monsters</li>
+                <li>Each skill uses MP, but MP regenerates by 5MP/sec</li>
+            </ul>
+            <input id="name" value="player" type="text">
+            <button id="startButton">Next!</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
